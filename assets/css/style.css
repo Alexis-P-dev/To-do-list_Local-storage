@@ -88,6 +88,10 @@ body {
     height: 20px;
 }
 
+.todo-actions {
+    display: flex;
+}
+
 .todo-actions button {
     margin-left: 10px;
     cursor: pointer;
@@ -124,3 +128,4 @@ body {
         font-size: 18px;
     }
 }
+
