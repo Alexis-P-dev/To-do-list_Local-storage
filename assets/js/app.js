@@ -1,6 +1,8 @@
+const body = document.getElementsByTagName("body")[0];
 const form = document.getElementById('form');
 const titleNote = document.getElementById('title');
 const todoListContainer = document.getElementById('todo-list');
+const themeCheckbox = document.getElementById('checkbox-theme');
 
 // Charger les tâches
 let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
@@ -101,4 +103,17 @@ form.addEventListener('submit', (event) => {
     renderTodoList();
 
     titleNote.value = "";
+});
+
+themeCheckbox.addEventListener("click", function (e) {
+    if (themeCheckbox.checked) {
+        body.classList.add("dark-bg");
+        form.classList.add("dark-form");
+        todoListContainer.classList.add("dark-todo");
+    }
+    else {
+        body.classList.remove("dark-bg");
+        form.classList.remove("dark-form");
+        todoListContainer.classList.remove("dark-todo");
+    }
 });
