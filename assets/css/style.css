@@ -164,11 +164,6 @@ input:checked + .slider:before {
     color: var(--font-color);
     padding: 5px 10px;
     border-radius: 5px;
-}
-
-.todo-actions button:hover {
-    background: #f2f2f2;
-    color: #020202;
 }    
 
 .dark-bg {
@@ -226,5 +221,6 @@ input:checked + .slider:before {
         font-size: 18px;
     }
 }
+
 
 
