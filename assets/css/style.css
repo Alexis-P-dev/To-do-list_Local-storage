@@ -166,6 +166,11 @@ input:checked + .slider:before {
     border-radius: 5px;
 }
 
+.todo-actions button:hover {
+    background: #f2f2f2;
+    color: #020202;
+}    
+
 .dark-bg {
     background-color: #171717;
 }
@@ -221,4 +226,5 @@ input:checked + .slider:before {
         font-size: 18px;
     }
 }
+
 
