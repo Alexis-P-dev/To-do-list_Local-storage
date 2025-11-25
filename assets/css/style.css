@@ -193,11 +193,13 @@ input:checked + .slider:before {
 
 .dark-todo li .todo-actions button {
     color: #f2f2f2;
+    transition: all 300ms ease;
 }
 
 .dark-todo li .todo-actions button:hover {
     color: #020202 !important;
     background: #f2f2f2 !important;
+    border: 1px solid #f2f2f2 !important;
 }
 
 @media (min-width: 320px) {
@@ -226,6 +228,7 @@ input:checked + .slider:before {
         font-size: 18px;
     }
 }
+
 
 
 
