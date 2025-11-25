@@ -4,6 +4,41 @@ const titleNote = document.getElementById('title');
 const todoListContainer = document.getElementById('todo-list');
 const themeCheckbox = document.getElementById('checkbox-theme');
 
+// --- Charger thème si enregistré ---
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    enableDarkMode();
+}
+
+// --- Écouteur du switch ---
+themeCheckbox.addEventListener("click", function () {
+    if (themeCheckbox.checked) {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
+
+// --- Fonctions ---
+function enableDarkMode() {
+    body.classList.add("dark-bg");
+    form.classList.add("dark-form");
+    todoListContainer.classList.add("dark-todo");
+
+    localStorage.setItem("theme", "dark");
+    themeCheckbox.checked = true;
+}
+
+function disableDarkMode() {
+    body.classList.remove("dark-bg");
+    form.classList.remove("dark-form");
+    todoListContainer.classList.remove("dark-todo");
+
+    localStorage.setItem("theme", "light");
+    themeCheckbox.checked = false;
+}
+
 // Charger les tâches
 let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
 
