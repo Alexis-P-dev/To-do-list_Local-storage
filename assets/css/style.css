@@ -195,6 +195,11 @@ input:checked + .slider:before {
     color: #f2f2f2;
 }
 
+.dark-todo li .todo-actions button:hover {
+    color: #020202 !important;
+    background: #f2f2f2 !important;
+}
+
 @media (min-width: 320px) {
     #new-list input, #new-list button {
         font-size: 12px;
@@ -221,6 +226,7 @@ input:checked + .slider:before {
         font-size: 18px;
     }
 }
+
 
 
 
